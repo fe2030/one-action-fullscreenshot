@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "One Action Fullscreenshot",
+  "version": "1.0.0",
+  "description": "ワンクリックまたはショートカットキーでWebページ全体のスクリーンショットを撮影し、クリップボードにコピーまたは保存するツール",
+  
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "downloads",
+    "clipboardWrite"
+  ],
+  
+  "action": {
+    "default_title": "Take Full Page Screenshot",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  
+  "background": {
+    "service_worker": "background.js"
+  },
+  
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+F",
+        "mac": "Alt+Shift+F"
+      },
+      "description": "Take full page screenshot"
+    }
+  },
+  
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
+

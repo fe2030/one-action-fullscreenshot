@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Action Fullscreenshot - Options</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <!-- ヘッダー -->
+    <header class="header">
+      <h1 class="title">One Action Fullscreenshot</h1>
+      <p class="subtitle">Settings</p>
+    </header>
+
+    <!-- 設定フォーム -->
+    <main class="settings">
+      <!-- Action Type 設定 -->
+      <section class="setting-group">
+        <label class="setting-label">Action Type</label>
+        <p class="setting-description">Choose what happens after capturing the screenshot.</p>
+        <div class="radio-group">
+          <label class="radio-item">
+            <input type="radio" name="actionType" value="clipboard" id="action-clipboard">
+            <span class="radio-custom"></span>
+            <span class="radio-label">Copy to Clipboard</span>
+            <span class="radio-badge default">Default</span>
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="actionType" value="download" id="action-download">
+            <span class="radio-custom"></span>
+            <span class="radio-label">Download File</span>
+          </label>
+        </div>
+      </section>
+
+      <!-- File Format 設定 -->
+      <section class="setting-group" id="format-section">
+        <label class="setting-label">File Format</label>
+        <p class="setting-description" id="format-description">Select the image format for screenshots.</p>
+        <div class="radio-group" id="format-group">
+          <label class="radio-item">
+            <input type="radio" name="fileFormat" value="png" id="format-png">
+            <span class="radio-custom"></span>
+            <span class="radio-label">PNG</span>
+            <span class="radio-badge default">Default</span>
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="fileFormat" value="jpeg" id="format-jpeg">
+            <span class="radio-custom"></span>
+            <span class="radio-label">JPEG</span>
+            <span class="radio-hint">Smaller file size</span>
+          </label>
+        </div>
+        <p class="format-notice" id="format-notice">ℹ️ Clipboard only supports PNG format</p>
+      </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+      <div class="shortcut-info">
+        <span class="shortcut-label">Keyboard Shortcut:</span>
+        <kbd class="shortcut-key">Alt</kbd>
+        <span class="shortcut-plus">+</span>
+        <kbd class="shortcut-key">Shift</kbd>
+        <span class="shortcut-plus">+</span>
+        <kbd class="shortcut-key">F</kbd>
+      </div>
+      <p class="save-status" id="save-status"></p>
+    </footer>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
+
